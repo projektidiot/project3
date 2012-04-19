@@ -2,14 +2,24 @@
 /* CSS Document */
 
 body {
+	background: url("../img/bg.jpg") repeat #f5c6dc;
 }
 #container {
 	width: 960px;
 	text-align: center;
 	margin: 0 auto;
 }
+#main {
+	margin-top: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:rgba(62,182,204,0.65);
+	width: 660px;
+	height: 130px;
+}
 #logo {
 	display: inline-block;
+	margin-top: -15px;
 	width: 610px;
 	height: 84px;
 	background: url("../img/logo.png") no-repeat 0 0;
@@ -20,7 +30,17 @@ body {
 }
 #term {
 	width: 630px;
+	background-color:rgba(251,255,204,0.65);
+	border: 1px solid rgba(121,122,41,0.65);
+	color: #985c78;
+	font-family: Verdana;
+	font-size: 16px;
 }
 #search {
+	margin-top: 5px;
+	background-color:rgba(251,255,204,0.65);
+	border: 1px solid rgba(121,122,41,0.65);
+	color: #985c78;
 	font-family: Verdana;
+	font-size: 14px;
 }
