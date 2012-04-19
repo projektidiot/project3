@@ -9,16 +9,17 @@ body {
 	margin: 0 auto;
 }
 #logo {
-	display: block;
-	margin-top: 335px;
-	background: url("../img/logo.jpg") no-repeat 0 0;
+	display: inline-block;
+	width: 610px;
+	height: 84px;
+	background: url("../img/logo.png") no-repeat 0 0;
 }
 #logo span {
 	position: absolute;
 	top: -999em;
 }
 #term {
-	width: 600px;
+	width: 630px;
 }
 #search {
 	font-family: Verdana;
