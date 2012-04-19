@@ -6,6 +6,12 @@ $(document).ready(function() {
 		var input = $('input[type=text]').val();
 		
 		$.ajax({
+			url: 'getLyrics.php',
+			type: 'POST',
+			data: {'term':input},
+			success: function(result) {
+				
+			}
 		});
 	});
 });
