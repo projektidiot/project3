@@ -1,2 +1,25 @@
 @charset "utf-8";
 /* CSS Document */
+
+body {
+}
+#container {
+	width: 960px;
+	text-align: center;
+	margin: 0 auto;
+}
+#logo {
+	display: block;
+	margin-top: 335px;
+	background: url("../img/logo.jpg") no-repeat 0 0;
+}
+#logo span {
+	position: absolute;
+	top: -999em;
+}
+#term {
+	width: 600px;
+}
+#search {
+	font-family: Verdana;
+}
