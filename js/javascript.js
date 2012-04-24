@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$('input[type=submit]').click(function(event) {
 		event.preventDefault();
-		$("#results").html("");
+		$("#selected").html("");
 		
 		var input = $('input[type=text]').val();
 		
@@ -12,14 +12,15 @@ $(document).ready(function() {
 			success: function(result) {
 				$("#lyrics ul").html(result);
 				
-				$('.lyrics').click(function(){
+				$("h1").click(function(){
+										
 					var id = $(this).attr('alt');
 					$.ajax({
 						url: 'getLyric.php',
 						type: 'POST',
 						data: {'id':id},
-						success: function(lyric){
-							$("#selected").html(lyric);
+						success: function(lyrics){
+							$("#selected").html(lyrics);
 						},
 					});
 				});

@@ -13,8 +13,7 @@ curl_close($ch);
 
 $xmlObject = simplexml_load_string($curlResponse); 
 
-foreach($xmlObject->SearchLyricResult as $searchLyrics)
-
-    echo "<li><a href='lyricID=".$searchLyrics->LyricId."&lyricCheckSum=".$searchLyrics->LyricChecksum."'/>".$searchLyrics->Artist." - ".$searchLyrics->Song."</a></li>";
-
+foreach($xmlObject->SearchLyricResult as $searchLyrics) {
+	echo "<li><h1 alt='lyricID=".$searchLyrics->LyricId."&lyricCheckSum=".$searchLyrics->LyricChecksum."'>".$searchLyrics->Artist." - ".$searchLyrics->Song."</h1></li>";
+}
 ?>

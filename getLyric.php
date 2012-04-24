@@ -1,23 +1,20 @@
 <?php 
 
-$lyric_id = $_POST['lyricID'];
-$lyric_sum = $_POST['lyricCheckSum'];
+$id = $_POST['id'];
 
-$ch = curl_init(); 
+$url = "http://api.chartlyrics.com/apiv1.asmx/GetLyric?";
+$url .= $id;
 
-curl_setopt($ch, CURLOPT_URL, "http://api.chartlyrics.com/apiv1.asmx/GetLyric?lyricId=".@lyric_id."&lyricCheckSum=".$lyric_sum);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_URL, $url);
+$curlResponse = curl_exec($ch);
+curl_close($ch);   
 
-$xml = curl_exec($ch);     
-
-$xmlObject = simplexml_load_string($xml); 
-
-$GetLyricResult = $xmlObject->GetLyricResult;
-    
-    $lyrics = $GetLyricResult->Lyric;
-
-    
-    echo "<p>".$lyrics."</p>";
+$xmlObject = simplexml_load_string($curlResponse); 
 
 
+	echo "<p>".$xmlObject->GetLyricResult->Lyric."</p>";
+	echo "<a href='".$url."'>".$url."</a>";
 ?>
